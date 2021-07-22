@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+const ll N=10e5;
+vector <ll> adj[N] ;   //Vector for maintaining adjacency list
+ll level[N]; //To determine the level of each node
+vector<bool>visited(N,false); //Mark the node if visited 
+void bfs(ll s) {
+    queue <ll> q;
+        q.push(s);
+        level[ s ] = 0 ;  //Setting the level of the source node as 0
+        visited[ s ] = true;
+        while(!q.empty())
+        {
+            ll parent = q.front();
+            cout<<parent<<" ";
+            q.pop();
+            for(ll i = 0;i < adj[parent].size() ; i++)
+            {
+                ll child=adj[parent][i];
+                if(visited[child] == false)
+                {
+            //Setting the level of each node with an increment in the level of parent node
+                     level[child] = level[parent]+1;                 
+                     q.push(child);
+                     visited[ child ] = true;
+                }
+            }
+        }
+    }
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bfs</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>
