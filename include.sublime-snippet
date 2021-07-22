@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[
+//Author:Parth Choksi
+/*Keep trying,you are very close. :)*/
+/*----------Libraries-----------*/
+//This file includes all standard library.On each compilation all the header files are imported recursively.
+#include<bits/stdc++.h>
+/*----------preprocessors:macros-------*/
+//When this line appears in a file, all subsequent occurrences of macro in that file will be replaced by replacement-text before the program is compiled. 
+#define ll long long int
+#define all(a) (a).begin(),(a).end()
+#define fastio ios_base::sync_with_stdio(false); cout.tie(NULL); cin.tie(NULL);
+/*----------namespace resolution--------*/
+//This is used as additional information to differentiate similar functions, classes, variables etc. with the same name available in different libraries.
+using namespace std;
+//globals
+//solver function
+void solve(){
+    ll n,m,i,j,k;
+}
+//main function
+int main(){
+    // freopen("input.txt","r",stdin);
+    // freopen("output.txt","w",stdout);
+    fastio;
+    ll i,j,k,count1,t,count2;
+    cin>>t;
+    while(t--)
+    {
+        solve();
+    }
+    
+    
+    return 0;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>include</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope>
+</snippet>

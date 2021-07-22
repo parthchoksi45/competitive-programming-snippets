@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+void linearsieve(ll N){
+//max value of N can be 10e7
+ll lp[N+1],i,j,k;
+memset(lp,0,sizeof(lp));
+vector<ll> pr;
+
+    for (i=2; i<=N; ++i) {
+        if (lp[i] == 0) {
+            lp[i] = i;
+            pr.push_back (i);
+        }
+        for (int j=0; j<(int)pr.size() && pr[j]<=lp[i] && i*pr[j]<=N; ++j)
+            lp[i * pr[j]] = pr[j];
+    }
+    for(i=1;i<=N;i++)
+        cout<<i<<" "<<lp[i]<<endl;
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>linearsieve</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.c++</scope> -->
+</snippet>
